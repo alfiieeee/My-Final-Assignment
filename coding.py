@@ -28,8 +28,8 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = datasets.load_iris()
-X = sepal_length, 
-Y = iris.target
+X = iris.drop ('species', axis = 1)
+Y = iris['species']
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
